@@ -10,7 +10,28 @@ void inc_num_triangle(int n ){
         cout<<endl;
     }
 }
+void character(int n ){
+
+    for(int i =1; i<=n ; i++){
+        for(char ch = 'A'; ch <= 'A'+i; ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+void character_2(int n ){
+
+    for(int i =1; i<=n ; i++){
+        for(char ch = 'A'; ch <= 'A'+(n-i-1); ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
 int main(){
     inc_num_triangle(4);
+    character(5);
+    character_2(5);
     return 0;
 }
