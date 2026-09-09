@@ -19,11 +19,28 @@ void count_div(int n){
     }
     cout<<count;
 }
+void prime_number(int n){
+    for(int number = 2; number <= n; number++){
+        bool is_prime = true;
+
+        for(int divisor = 2; divisor * divisor <= number; divisor++){
+            if(number % divisor == 0){
+                is_prime = false;
+                break;
+            }
+        }
+
+        if(is_prime){
+            cout << number << endl;
+        }
+    }
+}
 int main(){
     int m;
     cout<<"enter the value of m = ";
     cin>>m;
     // all_div(m);
-    count_div(m);
+    // count_div(m);
+    prime_number(m);
     return 0;
 }
