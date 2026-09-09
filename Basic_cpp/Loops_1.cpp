@@ -1,47 +1,47 @@
 #include<iostream>
 using namespace std;
-// void positive_negative(){
-// int n ;
-// cout<<"enter the number"<<endl;
-// cin>> n;
-// if(n>0){
-//     cout<<"positive";
-// }
-// else{
-//     cout<<"negative";
-// }
+void positive_negative(){
+int n ;
+cout<<"enter the number"<<endl;
+cin>> n;
+if(n>0){
+    cout<<"positive";
+}
+else{
+    cout<<"negative";
+}
 
-// }
+}
 
-// void sum_even(){
-//     int n, sum=0;
-//     cin>>n;
-//     for(int i =0; i<=n; i++){
-//         if(i%2==0){
-//             sum = sum +i;
-//         }
-//     }
-//     cout<<"sum of "<< n<<" even numbers ="<<sum;
+void sum_even(){
+    int n, sum=0;
+    cin>>n;
+    for(int i =0; i<=n; i++){
+        if(i%2==0){
+            sum = sum +i;
+        }
+    }
+    cout<<"sum of "<< n<<" even numbers ="<<sum;
 
-// }
+}
 
-// void factorial(){
-//     int n, i, factorial = 1; 
-//     cin>>n;
-//     for(i=1; i<=n ; i++){
-//         factorial = factorial * i;
-//     }
-//     cout<<factorial;
-// }
-// int recursive_factorial(int n ){
-//     if(n < 0){
-//         return -1;
-//     }
-//     if( n == 0 || n==1){
-//         return 1;
-//     }
-//     return n * recursive_factorial(n-1);
-// }
+void factorial(){
+    int n, i, factorial = 1; 
+    cin>>n;
+    for(i=1; i<=n ; i++){
+        factorial = factorial * i;
+    }
+    cout<<factorial;
+}
+int recursive_factorial(int n ){
+    if(n < 0){
+        return -1;
+    }
+    if( n == 0 || n==1){
+        return 1;
+    }
+    return n * recursive_factorial(n-1);
+}
 void cout_digits(){
     int n , i , count = 0;
     cout<<"eneter your number = ";
@@ -54,11 +54,33 @@ void cout_digits(){
 
     cout<<"number of digits are = "<<count;
 }
+void sum_of_digits(){
+    int n , i , sum = 0;
+    cout<<"eneter your number = ";
+    cin >> n;
+    while(n>0){
+        i = n % 10;
+        sum = sum + i;
+        n = n / 10;
+    }
+    cout<<"sum of digits = "<<sum;  
+}
+void reverse_number(){
+    int n, i, reverse=0;
+    cin >> n;
+    while( n> 0){
+        reverse =reverse*10+ (n % 10);
+        n=n/10;
+    }
+    cout << reverse; 
+}
 int main(){
-    // positive_negative();
-    // sum_even();
-    // factorial();
-    // cout<<recursive_factorial(5);
+    positive_negative();
+    sum_even();
+    factorial();
+    cout<<recursive_factorial(5);
     cout_digits();
+    sum_of_digits();
+    reverse_number();
     return 0;
 }
